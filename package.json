@@ -7,10 +7,6 @@
     "build": "tsc -p tsconfig.json",
     "start": "node dist/index.js",
     "dev": "nodemon src/index.ts",
-    "predebug": "npm run build",
-    "debug": "node --inspect dist/index.js",
-    "predev2": "npm run build",
-    "dev2": "concurrently \"npx tsc --watch\" \"nodemon dist/index.js\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

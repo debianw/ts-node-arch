@@ -1,17 +1,22 @@
 import Fastify,{ FastifyInstance, RouteShorthandOptions } from 'fastify'
 import * as userModule from './modules/user'
 import * as orderModule from './modules/order'
+import * as payModule from './modules/pay'
 
 const server: FastifyInstance = Fastify({
   logger: true,
 })
 
-server.register(userModule.routes, {
+server.register(userModule.controller, {
   prefix: "/user"
 })
 
-server.register(orderModule.routes, {
+server.register(orderModule.controller, {
   prefix: '/order'
+})
+
+server.register(payModule.routes, {
+  prefix: '/pay'
 })
 
 const start = async () => {

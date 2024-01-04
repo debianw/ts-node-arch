@@ -1,7 +1,7 @@
 const service = require('./order.service')
-const routes = require('./order.routes')
+const controller = require('./order.controller')
 
 module.exports = {
   service,
-  routes,
+  controller,
 }
